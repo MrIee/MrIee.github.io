@@ -37,9 +37,60 @@ h3 {
 p {
   line-height: 1.5; }
 
+.unstyle-link a, .menu a {
+  text-decoration: none; }
+
 #site-wrapper {
   min-height: 100%;
   height: 100%; }
+
+.menu {
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+  transition: top 0.5s ease-in-out;
+  position: fixed;
+  top: -100%;
+  z-index: 9; }
+  .menu .menu-item {
+    height: 33.33333%;
+    width: 100%;
+    font-family: 'Michroma', sans-serif;
+    font-size: 5rem;
+    line-height: calc(100vh * 0.3333);
+    vertical-align: middle;
+    color: #ccc;
+    transition: color 0.2s ease-in, background-color 0.25s ease-in; }
+  .menu .menu-item:hover {
+    color: #333;
+    background-color: steelblue; }
+
+.menu-dropdown {
+  top: 0; }
+
+.menu-button {
+  height: 48px;
+  width: 48px;
+  font-size: 2em;
+  border-radius: 2px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 99; }
+  .menu-button .fa-bars {
+    display: block;
+    position: relative;
+    top: 10px; }
+
+.menu-white {
+  color: #ccc; }
+
+.menu-black:hover {
+  background-color: rgba(190, 190, 190, 0.5); }
+
+.menu-white:hover {
+  background-color: rgba(51, 51, 51, 0.5); }
 
 #header {
   height: 100vh;
@@ -137,11 +188,11 @@ p {
   100% {
     top: 80%; } }
 #banner4 {
-  line-height: 100%;
-  vertical-align: center;
+  line-height: calc(100vh * 0.2);
+  vertical-align: middle;
   color: rgba(51, 51, 51, 0);
   background-color: steelblue;
-  background-image: url(../images/shattered-dark.png);
+  background-image: url(../images/shattered.png);
   animation: banner4 1s ease-in;
   animation-fill-mode: forwards;
   animation-delay: 1.75s;
@@ -152,20 +203,17 @@ p {
   0% {
     color: rgba(51, 51, 51, 0); }
   100% {
-    color: #333333;
-    background-image: url(../images/shattered.png); } }
+    color: #333333; } }
 @-moz-keyframes banner4 {
   0% {
     color: rgba(51, 51, 51, 0); }
   100% {
-    color: #333333;
-    background-image: url(../images/shattered.png); } }
+    color: #333333; } }
 @keyframes banner4 {
   0% {
     color: rgba(51, 51, 51, 0); }
   100% {
-    color: #333333;
-    background-image: url(../images/shattered.png); } }
+    color: #333333; } }
 .main-content {
   margin: 0 auto;
   position: absolute;
@@ -190,6 +238,16 @@ p {
     border-bottom: 0px solid transparent;
     position: absolute;
     z-index: 2; }
+  .main-content #triangle-contact {
+    height: 0;
+    width: 100%;
+    border-left: 49vw solid lightskyblue;
+    border-right: 49vw solid lightskyblue;
+    border-top: 50px solid transparent;
+    border-bottom: 0px solid lightskyblue;
+    position: relative;
+    top: -65px;
+    z-index: 2; }
   .main-content p {
     width: 70%;
     margin: 0 auto;
@@ -200,10 +258,16 @@ p {
   padding: 1em 0;
   padding-bottom: 100px; }
 
+#about-anchor {
+  height: 14%;
+  width: 100%;
+  position: absolute;
+  top: calc(-14% - 50px); }
+
 #about {
   min-height: 100%;
   width: 100%;
-  padding-top: 150px;
+  padding-top: 100px;
   background-color: steelblue; }
 
 #projects {
@@ -211,6 +275,7 @@ p {
   height: 100%;
   width: 100%;
   padding-top: 125px;
+  padding-bottom: 200px;
   color: #ccc;
   background-image: url(../images/rayure_blue.jpg);
   background-attachment: fixed;
@@ -246,6 +311,15 @@ p {
   min-height: 100%;
   height: 100%;
   width: 100%;
-  background-color: navy; }
+  background-color: lightskyblue; }
+
+#footer {
+  height: 30px;
+  width: 100%;
+  font-size: 0.75em;
+  line-height: 30px;
+  vertical-align: middle;
+  color: steelblue;
+  background-color: #333; }
 
 /*# sourceMappingURL=style.css.map */

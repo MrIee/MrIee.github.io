@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Michroma);
+@import 'variables';
 
 * {
     -webkit-box-sizing: border-box;
@@ -47,10 +48,78 @@ p {
     line-height: 1.5;
 }
 
+.unstyle-link a {
+    text-decoration: none;
+}
+
 #site-wrapper {
     min-height: 100%;
     height: 100%;
 }
+
+.menu {
+    @extend .unstyle-link;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    transition: top 0.5s ease-in-out;
+
+    position: fixed;
+    top: -100%;
+    z-index: 9;
+
+    .menu-item {
+        height: $menu-item-height;
+        width: 100%;
+        font-family: 'Michroma', sans-serif;
+        font-size: 5rem;
+        line-height: calc(100vh * 0.3333);
+        vertical-align: middle;
+        color: #ccc;
+        transition: color 0.2s ease-in, background-color 0.25s ease-in;
+    }
+
+    .menu-item:hover {
+        color: #333;
+        background-color: $site-color;
+    }
+}
+
+.menu-dropdown {
+    top: 0;
+}
+
+.menu-button {
+    height: 48px;
+    width: 48px;
+    font-size: 2em;
+    border-radius: 2px;
+    cursor: pointer;
+
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 99;
+
+    .fa-bars {
+        display: block;
+        position: relative;
+        top: 10px;
+    }
+}
+
+.menu-white {
+    color: #ccc;
+}
+
+.menu-black:hover {
+    background-color: rgba(190, 190, 190, 0.5);
+}
+
+.menu-white:hover {
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
 #header {
     height: 100vh;
     margin: 0 auto;
@@ -162,11 +231,11 @@ p {
 
 
 #banner4 {
-    line-height: 100%;
-    vertical-align: center;
+    line-height: calc(100vh * 0.2);
+    vertical-align: middle;
     color: rgba(51, 51, 51, 0);
-    background-color: steelblue;
-    background-image: url(../images/shattered-dark.png);
+    background-color: $site-color;
+    background-image: url(../images/shattered.png);
     animation: banner4 1s ease-in;
     animation-fill-mode: forwards;
     animation-delay: 1.75s;
@@ -177,26 +246,17 @@ p {
 
 @-webkit-keyframes banner4 {
     0% { color: rgba(51, 51, 51, 0); }
-    100% {
-        color: rgba(51, 51, 51, 1);
-        background-image: url(../images/shattered.png);
-    }
+    100% { color: rgba(51, 51, 51, 1); }
 }
 
 @-moz-keyframes banner4 {
     0% { color: rgba(51, 51, 51, 0); }
-    100% {
-        color: rgba(51, 51, 51, 1);
-        background-image: url(../images/shattered.png);
-    }
+    100% {color: rgba(51, 51, 51, 1); }
 }
 
 @keyframes banner4 {
     0% { color: rgba(51, 51, 51, 0); }
-    100% {
-        color: rgba(51, 51, 51, 1);
-        background-image: url(../images/shattered.png);
-    }
+    100% { color: rgba(51, 51, 51, 1); }
 }
 
 
@@ -210,10 +270,10 @@ p {
     #triangle-about {
         height: 0;
         width: 100%;
-        border-left: 49vw solid steelblue;
-        border-right: 49vw solid steelblue;
+        border-left: 49vw solid $about-color;
+        border-right: 49vw solid $about-color;
         border-top: 50px solid transparent;
-        border-bottom: 0px solid steelblue;
+        border-bottom: 0px solid $about-color;
 
         position: absolute;
         top: -50px;
@@ -224,10 +284,23 @@ p {
         width: 100%;
         border-left: 49vw solid transparent;
         border-right: 49vw solid transparent;
-        border-top: 50px solid steelblue;
+        border-top: 50px solid $about-color;
         border-bottom: 0px solid transparent;
 
         position: absolute;
+        z-index: 2;
+    }
+
+    #triangle-contact {
+        height: 0;
+        width: 100%;
+        border-left: 49vw solid $contact-color;
+        border-right: 49vw solid $contact-color;
+        border-top: 50px solid transparent;
+        border-bottom: 0px solid $contact-color;
+
+        position: relative;
+        top: -65px;
         z-index: 2;
     }
 
@@ -244,11 +317,18 @@ p {
     padding-bottom: 100px;
 }
 
+#about-anchor {
+    height: 14%;
+    width: 100%;
+    position: absolute;
+    top: calc(-14% - 50px);
+}
+
 #about {
     min-height: 100%;
     width: 100%;
-    padding-top: 150px;
-    background-color: steelblue;
+    padding-top: 100px;
+    background-color: $about-color;
 }
 
 #projects {
@@ -256,8 +336,9 @@ p {
     height: 100%;
     width: 100%;
     padding-top: 125px;
+    padding-bottom: 200px;
     color: #ccc;
-    background-image: url(../images/rayure_blue.jpg);
+    background-image: $projects-background;
     background-attachment: fixed;
     background-position: center;
 
@@ -308,5 +389,15 @@ p {
     min-height: 100%;
     height: 100%;
     width: 100%;
-    background-color: navy;
+    background-color: $contact-color;
+}
+
+#footer {
+    height: 30px;
+    width: 100%;
+    font-size: 0.75em;
+    line-height: 30px;
+    vertical-align: middle;
+    color: steelblue;
+    background-color: $footer-color;
 }
