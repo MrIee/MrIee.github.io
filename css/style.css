@@ -258,13 +258,13 @@ p {
   padding: 1em 0;
   padding-bottom: 100px; }
 
-#about-anchor {
+#about {
   height: 14%;
   width: 100%;
   position: absolute;
   top: calc(-14% - 50px); }
 
-#about {
+#about-section {
   min-height: 100%;
   width: 100%;
   padding-top: 100px;
