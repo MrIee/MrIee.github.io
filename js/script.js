@@ -1,12 +1,14 @@
 $(document).ready(function() {
     $(".menu-button").on("click", function() {
+        $(".menu").show();
         $(".menu").toggleClass("menu-dropdown");
         $(".menu-button").toggleClass("menu-white");
-    })
+    });
 
     $('a[href^="#"]').on('click',function (e) {
         e.preventDefault();
 
+        $(".menu").toggle();
         $(".menu").toggleClass("menu-dropdown");
         $(".menu-button").toggleClass("menu-white");
 

@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Michroma);
-@import 'variables';
+@import 'variables-and-mixins';
+@import 'chevron-button';
 
 * {
     -webkit-box-sizing: border-box;
@@ -66,14 +67,14 @@ p {
 
     position: fixed;
     top: -100%;
-    z-index: 9;
+    z-index: 98;
 
     .menu-item {
         height: $menu-item-height;
         width: 100%;
         font-family: 'Michroma', sans-serif;
         font-size: 5rem;
-        line-height: calc(100vh * 0.3333);
+        line-height: 100vh * 0.25;
         vertical-align: middle;
         color: #ccc;
         transition: color 0.2s ease-in, background-color 0.25s ease-in;
@@ -279,7 +280,7 @@ p {
         top: -50px;
     }
 
-    #triangle-projects {
+    #triangle-skills {
         height: 0;
         width: 100%;
         border-left: 49vw solid transparent;
@@ -288,6 +289,19 @@ p {
         border-bottom: 0px solid transparent;
 
         position: absolute;
+        z-index: 2;
+    }
+
+    #triangle-projects {
+        height: 0;
+        width: 100%;
+        border-left: 49vw solid $projects-color;
+        border-right: 49vw solid $projects-color;
+        border-top: 50px solid transparent;
+        border-bottom: 0px solid $projects-color;
+
+        position: relative;
+        top: -100px;
         z-index: 2;
     }
 
@@ -327,18 +341,42 @@ p {
 #about-section {
     min-height: 100%;
     width: 100%;
-    padding-top: 100px;
+    padding-top: 75px;
     background-color: $about-color;
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+}
+
+#skills {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    padding-top: 125px;
+    padding-bottom: 100px;
+    color: #ccc;
+    background-image: $skills-background;
+    background-attachment: fixed;
+    background-position: center;
+
+    ul > li {
+        display: inline;
+        font-size: 8rem;
+        color: lightskyblue;
+        list-style-type: none;
+        margin-right: 0.5em;
+    }
 }
 
 #projects {
     min-height: 100%;
     height: 100%;
     width: 100%;
-    padding-top: 125px;
+    padding-top: 50px;
     padding-bottom: 200px;
     color: #ccc;
-    background-image: $projects-background;
+    background-color: $projects-color;
     background-attachment: fixed;
     background-position: center;
 
@@ -390,6 +428,33 @@ p {
     height: 100%;
     width: 100%;
     background-color: $contact-color;
+
+    p {
+        text-align: center;
+    }
+
+    ul > li {
+        @extend .unstyle-link;
+        display: inline;
+        font-size: 4rem;
+        color: #eee;
+        list-style-type: none;
+        margin-right: 0.3em;
+    }
+
+    .fa {
+        color: #eee;
+        -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+        -moz-transition: color 0.3s ease-in-out, -moz-transition 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .fa:hover {
+        color: dodgerblue;
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        transform: scale(1.25);
+    }
 }
 
 #footer {
