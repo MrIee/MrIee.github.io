@@ -28,9 +28,8 @@ h1, h2, h3 {
 }
 
 h1 {
-    display: block;
     font-size: 6rem;
-    line-height: 2;
+    line-height: 100vh * 0.2;
 }
 
 h2 {
@@ -276,8 +275,8 @@ p {
         border-top: 50px solid transparent;
         border-bottom: 0px solid $about-color;
 
-        position: absolute;
-        top: -50px;
+        position: relative;
+        top: -100px;
     }
 
     #triangle-skills {
@@ -288,7 +287,8 @@ p {
         border-top: 50px solid $about-color;
         border-bottom: 0px solid transparent;
 
-        position: absolute;
+        position: relative;
+        top: -75px;
         z-index: 2;
     }
 
@@ -308,13 +308,13 @@ p {
     #triangle-contact {
         height: 0;
         width: 100%;
-        border-left: 49vw solid $contact-color;
-        border-right: 49vw solid $contact-color;
-        border-top: 50px solid transparent;
-        border-bottom: 0px solid $contact-color;
+        border-left: 49vw solid transparent;
+        border-right: 49vw solid transparent;
+        border-top: 50px solid $projects-color;;
+        border-bottom: 0px solid transparent;
 
         position: relative;
-        top: -65px;
+        top: -75px;
         z-index: 2;
     }
 
@@ -327,8 +327,10 @@ p {
 }
 
 .content {
-    padding: 1em 0;
-    padding-bottom: 100px;
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    padding: 50px 0;
 }
 
 #about {
@@ -339,22 +341,19 @@ p {
 }
 
 #about-section {
-    min-height: 100%;
-    width: 100%;
-    padding-top: 75px;
     background-color: $about-color;
 
     h2 {
         margin-bottom: 2rem;
     }
+
+    #resume {
+        margin-top: 75px;
+    }
 }
 
 #skills {
-    min-height: 100%;
-    height: 100%;
-    width: 100%;
-    padding-top: 125px;
-    padding-bottom: 100px;
+    padding-top: 75px;
     color: #ccc;
     background-image: $skills-background;
     background-attachment: fixed;
@@ -370,91 +369,148 @@ p {
 }
 
 #projects {
-    min-height: 100%;
-    height: 100%;
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 200px;
     color: #ccc;
     background-color: $projects-color;
     background-attachment: fixed;
     background-position: center;
 
-    .project-link {
-        height: 300px;
-    }
-
-    .row {
-        padding: 0 4rem;
-    }
-
     .project-panel {
         height: 300px;
+        width: 300px;
+        position: relative;
+    }
+
+    .project-link {
+        display: block;
+        height: 35px;
+        width: 150px;
+        font-family: 'Michroma', sans-serif;
+        line-height: 35px;
+        vertical-align: middle;
+        text-decoration: none;
+        color: #eee;
+        background-color: lightskyblue;
+
+        position: absolute;
+        bottom: 0;
+        z-index: 9;
+    }
+
+    .project-link:hover  {
+        background-color: dodgerblue;
+    }
+
+    .project-link-left {
+        border-right: 1px solid #eee;
+        left: 0;
+
+        .fa {
+            font-size: 1.2em;
+        }
+    }
+
+    .project-link-right {
+        border-left: 1px solid #eee;
+        right: 0;
+    }
+
+    .project-hover:after {
+        height: 300px;
+        width: 300px;
+        line-height: 300px;
+        vertical-align: middle;
+        font-family: 'Michroma', sans-serif;
+        font-size: 1.4em;
+        color: #333;
+        opacity: 0;
+
+        -webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
+        -moz-transition: background-color 0.5s ease, opacity 0.5s ease;
+        transition: background-color 0.5s ease, opacity 0.5s ease;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .project-hover:hover:after {
+        background-color: rgba(255, 255, 255, 0.75);
+        opacity: 1;
     }
 
     #memory {
-        background: url(../images/memory.png);
+        background: url(../images/memory.jpg);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+    }
+
+    #memory:after {
+        content: "Memory";
     }
 
     #interact {
-        background: url(../images/interact.png);
+        background: url(../images/interact.jpg);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
     }
 
-    #cascadingstylequiz {
-
-        p {
-            text-align: center;
-            font-size: 6rem;
-            padding: 0;
-
-            background-color: rgba(0, 0, 0, 0.4);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: lightgreen 4px 4px 1px;
-        }
+    #interact:after {
+        content: "Interact Puzzles";
     }
+
+    #cascadingstylequiz {
+        background: url(../images/cascadingstylequiz.jpg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #cascadingstylequiz:after {
+        content: "Cascading Style Quiz";
+    }
+
 }
 
 #contact {
-    min-height: 100%;
-    height: 100%;
-    width: 100%;
-    background-color: $contact-color;
+    padding-top: 75px;
+    background-color: steelblue;
+    background-image: $contact-background;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom;
 
     p {
         text-align: center;
+
+        .fa-mobile {
+            font-size: 1.5em;
+        }
     }
 
     ul > li {
         @extend .unstyle-link;
         display: inline;
         font-size: 4rem;
-        color: #eee;
         list-style-type: none;
         margin-right: 0.3em;
+
+         .fa {
+            color: #eee;
+            -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+            -moz-transition: color 0.3s ease-in-out, -moz-transition 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .fa:hover {
+            color: dodgerblue;
+            -webkit-transform: scale(1.25);
+            -moz-transform: scale(1.25);
+            transform: scale(1.25);
+        }
     }
 
-    .fa {
-        color: #eee;
-        -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-        -moz-transition: color 0.3s ease-in-out, -moz-transition 0.3s ease-in-out;
-        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    }
-
-    .fa:hover {
-        color: dodgerblue;
-        -webkit-transform: scale(1.25);
-        -moz-transform: scale(1.25);
-        transform: scale(1.25);
-    }
 }
 
 #footer {
@@ -465,4 +521,21 @@ p {
     vertical-align: middle;
     color: steelblue;
     background-color: $footer-color;
+}
+
+@media (max-width: 970px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+        line-height: (100vh * 0.2) / 2;
+    }
+
+    #about {
+        top: calc(-6% - 50px);
+    }
 }

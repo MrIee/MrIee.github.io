@@ -32,16 +32,17 @@
   span {
     width: 140px + $btn-chevron-border * 2;
     font-family: 'Michroma', sans-serif;
-    font-size: 0.9em;
-    line-height: 16px;
     margin: 0 auto;
     color: #eee;
 
     position: absolute;
-    top: 6px;
     left: 0;
     right: 0;
     z-index: 9;
+  }
+
+  .fa {
+    font-size: 1.25em;
   }
 }
 

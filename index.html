@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Alex Lee</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/devicon.min.css">
-    <link rel="stylesheet" href="css/devicon-colors">
+    <link rel="stylesheet" href="css/devicon-colors.css">
     <link rel="stylesheet" href="css/style.css">
 
     <script src="js/jquery.js"></script>
     <script src="js/script.js"></script>
+
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div id="site-wrapper">
@@ -37,10 +38,9 @@
         </section>
 
         <div class="main-content">
-
             <div id="about"></div>
-            <div id="triangle-about"></div>
             <section class="content" id="about-section">
+                <div id="triangle-about"></div>
                 <h2>About Me</h2>
                 <p>
                     I am an IT graduate looking to expand my skills in the field of front end development. I have a keen interest in CSS and JavaScript and its many libraries and how they can interact with each other to produce an intuitive and memorable user experience. Having recently completed the Web Development Immersive course at General Assembly, I am excited to grow my career by being part of a supportive and collaborative team.
@@ -52,18 +52,18 @@
                 </p>
 
                 <a href="Resume - Alex Lee.pdf" target="_blank">
-                    <div class="btn">
+                    <div class="btn" id="resume">
                         <div class="btn-chevron" id="btn-chevron-border"></div>
                         <div class="btn-chevron" id="btn-chevron">
-                            <span>Download Resume</span>
+                            <span><i class="fa fa-file-pdf-o"></i> Resume</span>
                         </div>
                     </div>
                 </a>
             </section>
 
-            <div id="triangle-skills"></div>
             <section class="content" id="skills">
                 <a id="skills"></a>
+                <div id="triangle-skills"></div>
                 <h2>Skills</h2>
                 <ul>
                     <li><i class="devicon-html5-plain-wordmark"></i></li>
@@ -86,21 +86,34 @@
                 <a id="projects"></a>
                 <div id="triangle-projects"></div>
                 <h2>Projects</h2>
-                <div class="row">
 
-                    <a class="one-third column project-link" href="http://alexwlee89.github.io/memory/" target="_blank">
-                        <div class="twelve columns project-panel" id="memory"></div>
-                    </a>
-                    <a class="one-third column project-link" href="https://interact-puzzle.herokuapp.com/" target="_blank">
-                        <div class="twelve columns project-panel" id="interact"></div>
-                    </a>
-                    <a class="one-third column project-link" href="https://cascadingstylequiz.herokuapp.com/" target="_blank">
-                        <div class="twelve columns project-panel" id="cascadingstylequiz">
-                            <p>
-                                Cascading Style Quiz
-                            </p>
+                <div class="container">
+                    <div class="row">
+
+                        <div class="one-third column">
+                            <div class="project-panel project-hover" id="memory">
+                                <a class="project-link project-link-left" href="https://github.com/alexwlee89/memory" target="_blank" ><i class="fa fa-github"></i> Github</a>
+                                <a class="project-link project-link-right" href="http://alexwlee89.github.io/memory/" target="_blank"><i class="fa fa-external-link"></i> Demo</a>
+                            </div>
+
+
                         </div>
-                    </a>
+
+                        <div class="one-third column">
+                            <div class="project-panel project-hover" id="interact">
+                                <a class="project-link project-link-left" href="https://github.com/alexwlee89/interact" target="_blank" ><i class="fa fa-github"></i> Github</a>
+                                <a class="project-link project-link-right" href="https://interact-puzzle.herokuapp.com/" target="_blank"><i class="fa fa-external-link"></i> Demo</a>
+                            </div>
+                        </div>
+
+                        <div class="one-third column">
+                            <div class="project-panel project-hover" id="cascadingstylequiz">
+                                <a class="project-link project-link-left" href="https://github.com/alexwlee89/cascadingstylequiz" target="_blank" ><i class="fa fa-github"></i> Github</a>
+                                <a class="project-link project-link-right" href="https://cascadingstylequiz.herokuapp.com/" target="_blank"><i class="fa fa-external-link"></i> Demo</a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </section>
 
@@ -110,12 +123,12 @@
                 <h2>Contact</h2>
                 <ul>
                     <li>
-                        <a href="https://github.com/alexwlee89">
+                        <a href="https://github.com/alexwlee89" target="_blank">
                             <i class="fa fa-github-square"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://au.linkedin.com/in/alexwleeweb">
+                        <a href="https://au.linkedin.com/in/alexwleeweb" target="_blank">
                             <i class="fa fa-linkedin-square"></i>
                         </a>
                     </li>
@@ -126,8 +139,8 @@
                     </li>
                 </ul>
                 <p>
-                    Mobile: 0423 597 009<br/>
-                    Email: alexwlee.web@gmail.com<br/>
+                    <i class="fa fa-mobile"></i> 0423 597 009<br/>
+                    <i class="fa fa-envelope-o"></i> alexwlee.web@gmail.com
                 </p>
             </section>
 
