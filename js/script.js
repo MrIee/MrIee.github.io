@@ -14,10 +14,11 @@ $(document).ready(function() {
 
         var target = this.hash,
         $target = $(target);
+        var time = Math.abs(window.top.pageYOffset - $target.offset().top);
 
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top
-        }, 700, 'swing', function () {
+        }, time, 'swing', function () {
             window.location.hash = target;
         });
     });

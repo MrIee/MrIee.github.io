@@ -334,10 +334,11 @@ p {
 }
 
 #about {
-    height: 14%;
+    height: 200px;
     width: 100%;
     position: absolute;
-    top: calc(-9% - 50px);
+    top: -250px;
+    border: 3px solid red;
 }
 
 #about-section {
@@ -377,15 +378,18 @@ p {
     .project-panel {
         height: 300px;
         width: 300px;
+        margin-bottom: 20px;
+
         position: relative;
     }
 
     .project-link {
         display: block;
-        height: 35px;
+        height: 25px;
         width: 150px;
         font-family: 'Michroma', sans-serif;
-        line-height: 35px;
+        font-size: 0.8em;
+        line-height: 25px;
         vertical-align: middle;
         text-decoration: none;
         color: #eee;
@@ -396,12 +400,27 @@ p {
         z-index: 9;
     }
 
-    .project-link:hover  {
+    .project-link:hover {
         background-color: dodgerblue;
     }
 
+    .project-link-left:hover:before {
+        border-bottom: 10px solid dodgerblue;
+    }
+
+    .project-link-left:hover:after {
+        border-top: 10px solid dodgerblue;
+    }
+
+    .project-link-right:hover:before {
+        border-bottom: 10px solid dodgerblue;
+    }
+
+    .project-link-right:hover:after {
+        border-top: 10px solid dodgerblue;
+    }
+
     .project-link-left {
-        border-right: 1px solid #eee;
         left: 0;
 
         .fa {
@@ -409,9 +428,56 @@ p {
         }
     }
 
+    .project-link-left:before {
+        content: "";
+        height: 0;
+        width: 0;
+        border-bottom: 10px solid lightskyblue;
+        border-right: 150px solid transparent;
+
+        position: absolute;
+        top: -10px;
+        left: 0;
+    }
+
+    .project-link-left:after {
+        content: "";
+        height: 0;
+        width: 0;
+        border-top: 10px solid lightskyblue;
+        border-left: 150px solid transparent;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
     .project-link-right {
-        border-left: 1px solid #eee;
         right: 0;
+    }
+
+    .project-link-right:before {
+        content: "";
+        height: 0;
+        width: 0;
+        border-bottom: 10px solid lightskyblue;
+        border-left: 150px solid transparent;
+
+        position: absolute;
+        top: -10px;
+        left: 0;
+    }
+
+    .project-link-right:after {
+        content: "";
+        height: 0;
+        width: 0;
+        border-top: 10px solid lightskyblue;
+        border-right: 150px solid transparent;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
 
     .project-hover:after {
