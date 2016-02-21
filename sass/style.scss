@@ -377,7 +377,7 @@ p {
     .project-panel {
         height: 300px;
         width: 300px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
 
         position: relative;
     }
@@ -588,13 +588,22 @@ p {
     background-color: $footer-color;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 1150px) {
     h1 {
         font-size: 5rem;
     }
+
+    .one-third.column {
+        width: 48%;
+        margin: 0 auto;
+    }
+
+    .project-panel {
+        margin: 0 auto;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     h1 {
         font-size: 4rem;
         line-height: (100vh * 0.2) / 2;
@@ -602,5 +611,9 @@ p {
 
     #about {
         top: calc(-6% - 50px);
+    }
+
+    .one-third.column {
+        width: 100%;
     }
 }
