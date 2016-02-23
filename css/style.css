@@ -374,16 +374,16 @@ p {
   background-attachment: fixed;
   background-position: center; }
   #projects .project-panel {
-    height: 300px;
-    width: 300px;
+    height: 226px;
+    width: 226px;
     margin-bottom: 30px;
     position: relative; }
   #projects .project-link {
     display: block;
     height: 25px;
-    width: 150px;
+    width: 50%;
     font-family: 'Michroma', sans-serif;
-    font-size: 0.8em;
+    font-size: 0.7em;
     line-height: 25px;
     vertical-align: middle;
     text-decoration: none;
@@ -411,7 +411,7 @@ p {
     height: 0;
     width: 0;
     border-bottom: 10px solid lightskyblue;
-    border-right: 150px solid transparent;
+    border-right: 113px solid transparent;
     position: absolute;
     top: -10px;
     left: 0; }
@@ -420,7 +420,7 @@ p {
     height: 0;
     width: 0;
     border-top: 10px solid lightskyblue;
-    border-left: 150px solid transparent;
+    border-left: 113px solid transparent;
     position: absolute;
     top: 100%;
     left: 0; }
@@ -431,7 +431,7 @@ p {
     height: 0;
     width: 0;
     border-bottom: 10px solid lightskyblue;
-    border-left: 150px solid transparent;
+    border-left: 113px solid transparent;
     position: absolute;
     top: -10px;
     left: 0; }
@@ -440,17 +440,16 @@ p {
     height: 0;
     width: 0;
     border-top: 10px solid lightskyblue;
-    border-right: 150px solid transparent;
+    border-right: 113px solid transparent;
     position: absolute;
     top: 100%;
     left: 0; }
   #projects .project-hover:after {
-    height: 300px;
-    width: 300px;
-    line-height: 300px;
+    height: 100%;
+    width: 100%;
+    line-height: 226px;
     vertical-align: middle;
     font-family: 'Michroma', sans-serif;
-    font-size: 1.4em;
     color: #333;
     opacity: 0;
     -webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
@@ -463,21 +462,38 @@ p {
     background-color: rgba(255, 255, 255, 0.75);
     opacity: 1; }
   #projects #memory {
-    background: url(../images/memory.jpg);
+    background-image: url(../images/memory.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
   #projects #memory:after {
     content: "Memory"; }
   #projects #interact {
-    background: url(../images/interact.jpg);
+    background-image: url(../images/interact.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
   #projects #interact:after {
     content: "Interact Puzzles"; }
+  #projects #spacerace {
+    background-image: url(../images/spacerace1.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: carousel 6s ease-in-out infinite; }
+@keyframes carousel {
+  25% {
+    background-image: url(../images/spacerace2.jpg); }
+  50% {
+    background-image: url(../images/spacerace3.jpg); }
+  75% {
+    background-image: url(../images/spacerace4.jpg); }
+  100% {
+    background-image: url(../images/spacerace1.jpg); } }
+  #projects #spacerace:after {
+    content: "Spacerace"; }
   #projects #cascadingstylequiz {
-    background: url(../images/cascadingstylequiz.jpg);
+    background-image: url(../images/cascadingstylequiz.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
@@ -524,7 +540,7 @@ p {
   h1 {
     font-size: 5rem; }
 
-  .one-third.column {
+  .three.columns {
     width: 48%;
     margin: 0 auto; }
 
@@ -538,7 +554,7 @@ p {
   #about {
     top: calc(-6% - 50px); }
 
-  .one-third.column {
+  .three.columns {
     width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
