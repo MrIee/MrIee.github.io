@@ -88,7 +88,7 @@ body {
   color: #333;
   background-color: #333; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Michroma', sans-serif; }
 
 h1 {
@@ -444,10 +444,10 @@ p {
     position: absolute;
     top: 100%;
     left: 0; }
-  #projects .project-hover:after {
-    height: 100%;
-    width: 100%;
-    line-height: 226px;
+  #projects .project-hover {
+    height: 226px;
+    width: 226px;
+    padding-top: 1em;
     vertical-align: middle;
     font-family: 'Michroma', sans-serif;
     color: #333;
@@ -456,31 +456,48 @@ p {
     -moz-transition: background-color 0.5s ease, opacity 0.5s ease;
     transition: background-color 0.5s ease, opacity 0.5s ease;
     position: absolute;
-    top: 0;
-    right: 0; }
-  #projects .project-hover:hover:after {
-    background-color: rgba(255, 255, 255, 0.75);
+    top: 0; }
+    #projects .project-hover p {
+      padding: 0;
+      font-family: 'Trebuchet MS';
+      font-size: 0.85em; }
+  #projects .project-hover:hover, #projects .project-link-hover:hover + .project-hover {
+    background-color: rgba(255, 255, 255, 0.85);
     opacity: 1; }
   #projects #memory {
     background-image: url(../images/memory.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
-  #projects #memory:after {
-    content: "Memory"; }
   #projects #interact {
     background-image: url(../images/interact.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
-  #projects #interact:after {
-    content: "Interact Puzzles"; }
   #projects #spacerace {
     background-image: url(../images/spacerace1.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     animation: carousel 6s ease-in-out infinite; }
+@-webkit-keyframes carousel {
+  25% {
+    background-image: url(../images/spacerace2.jpg); }
+  50% {
+    background-image: url(../images/spacerace3.jpg); }
+  75% {
+    background-image: url(../images/spacerace4.jpg); }
+  100% {
+    background-image: url(../images/spacerace1.jpg); } }
+@-moz-keyframes carousel {
+  25% {
+    background-image: url(../images/spacerace2.jpg); }
+  50% {
+    background-image: url(../images/spacerace3.jpg); }
+  75% {
+    background-image: url(../images/spacerace4.jpg); }
+  100% {
+    background-image: url(../images/spacerace1.jpg); } }
 @keyframes carousel {
   25% {
     background-image: url(../images/spacerace2.jpg); }
@@ -490,15 +507,11 @@ p {
     background-image: url(../images/spacerace4.jpg); }
   100% {
     background-image: url(../images/spacerace1.jpg); } }
-  #projects #spacerace:after {
-    content: "Spacerace"; }
   #projects #cascadingstylequiz {
     background-image: url(../images/cascadingstylequiz.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
-  #projects #cascadingstylequiz:after {
-    content: "Cascading Style Quiz"; }
 
 #contact {
   padding-top: 75px;
