@@ -1,16 +1,14 @@
 $(document).ready(function() {
-    $(".menu-button").on("click", function() {
+    $(".menu__button").on("click", function() {
         $(".menu").show();
-        $(".menu").toggleClass("menu-dropdown");
-        $(".menu-button").toggleClass("menu-white");
+        $(".menu").toggleClass("tw-translate-y-full");
     });
 
     $('a[href^="#"]').on('click',function (e) {
         e.preventDefault();
 
         $(".menu").toggle();
-        $(".menu").toggleClass("menu-dropdown");
-        $(".menu-button").toggleClass("menu-white");
+        $(".menu").toggleClass("tw-translate-y-full");
 
         var target = this.hash,
         $target = $(target);

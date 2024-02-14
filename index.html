@@ -1,207 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Alex Lee</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="public/style.css">
+    <script src="https://kit.fontawesome.com/2a1dacb271.js" crossorigin="anonymous"></script>
     <script src="js/jquery.js"></script>
     <script src="js/script.js"></script>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <div id="site-wrapper">
-        <nav class="menu">
-            <a href="#about"><div class="menu-item">About</div></a>
-            <a href="#skills"><div class="menu-item">Skillset</div></a>
-            <a href="#projects"><div class="menu-item">Projects</div></a>
-            <a href="#contact"><div class="menu-item">Contact</div></a>
-        </nav>
+  </head>
+  <body>
+    <nav class="menu">
+      <a href="#about"><div class="menu__item">About</div></a>
+      <a href="#skills"><div class="menu__item">Skillset</div></a>
+      <a href="#projects"><div class="menu__item">Projects</div></a>
+      <a href="#contact"><div class="menu__item">Contact</div></a>
+    </nav>
 
-        <div class="menu-button menu-black">
-            <i class="fa fa-bars"></i>
-        </div>
-
-        <section id="header">
-            <div class="banner banner--portrait"></div>
-            <div class="banner banner--fill"></div>
-            <div class="banner banner--code"></div>
-            <div class="banner banner-devIcons"></div>
-            <div class="banner banner--center">
-                <h1 class="tw-text-8xl">I'm Alex Lee, welcome</h1>
-            </div>
-        </section>
-
-        <div class="main-content">
-            <div id="about"></div>
-            <section class="content" id="about-section">
-                <div id="triangle-about"></div>
-                <h2>About Me</h2>
-                <p>
-                    I am a Web Developer with a deep passion for the front end experience. I find
-                     working with html, css and javascript to be fun and rewarding and am eager to
-                     explore further into the many possibilities they present when used together.
-                </p>
-                <p>
-                    I am currently working for Ordermentum, a small company developing a web based
-                    service for small retail business to easily manage orders to their suppliers.
-                    My role involves using react, redux and css to maintain as well as produce new and
-                     exciting features such as interface redesigns and new UI elements.
-                </p>
-                <a href="Resume - Alex Lee.pdf" target="_blank">
-                    <div class="btn" id="resume">
-                        <div class="btn-chevron" id="btn-chevron-border"></div>
-                        <div class="btn-chevron" id="btn-chevron">
-                            <span><i class="fa fa-file-pdf-o"></i> Resume</span>
-                        </div>
-                    </div>
-                </a>
-            </section>
-
-            <section class="content" id="skills">
-                <a id="skills"></a>
-                <div id="triangle-skills"></div>
-                <h2>Skills</h2>
-                <ul>
-                    <li><i class="devicons devicons-html5"></i></li>
-                    <li><i class="devicons devicons-css3"></i></li>
-                    <li><i class="devicons devicons-sass"></i></li>
-                    <li><i class="devicons devicons-javascript_badge"></i></li>
-                    <li><i class="devicons devicons-jquery"></i></li>
-                </ul>
-                <ul>
-                    <li><i class="devicons devicons-react"></i></li>
-                    <li><i class="devicons devicons-postgresql"></i></li>
-                    <li><i class="devicons devicons-github_badge"></i></li>
-                    <li><i class="devicons devicons-photoshop"></i></li>
-                    <li><i class="devicons devicons-visualstudio"></i>
-                </ul>
-                <ul>
-                    <li><i class="devicons devicons-windows"></i></li>
-                    <li><i class="devicons devicons-apple"></i></li
-                </ul>
-            </section>
-
-            <section class="content" id="projects">
-                <a id="projects"></a>
-                <div id="triangle-projects"></div>
-                <h2>Projects</h2>
-
-                <div class="container">
-                    <div class="row">
-
-                        <div class="three columns">
-                            <div class="project-panel" id="memory">
-                                <div class="project-link-hover">
-                                    <a class="project-link project-link-left" href="https://github.com/mriee/memory" target="_blank" ><i class="fa fa-github"></i> Github</a>
-                                    <a class="project-link project-link-right" href="http://mriee.github.io/memory/" target="_blank"><i class="fa fa-external-link"></i> Demo</a>
-                                </div>
-                                <div class="project-hover">
-                                    Memory
-                                    <p>
-                                        Memory is based on the card game memory. The aim is to reveal all the face-down cards on the board by revealing pairs of cards.
-                                    </p>
-                                    <p>
-                                        <br/>
-                                        Made with jQuery.
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="three columns">
-                            <div class="project-panel" id="interact">
-                                <div class="project-link-hover">
-                                    <a class="project-link project-link-left" href="https://github.com/mriee/interact" target="_blank" ><i class="fa fa-github"></i> Github</a>
-                                    <a class="project-link project-link-right" href="https://interact-puzzle.herokuapp.com/" target="_blank"><i class="fa fa-external-link"></i> Demo</a>
-                                </div>
-                                <div class="project-hover">
-                                    Interact Puzzles
-                                    <p>
-                                        Interact Puzzles is an app that converts images into interactive jigsaw puzzles.
-                                    </p>
-                                    <p>
-                                        <br/>
-                                        Made with jQuery and Ruby on Rails.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                         <div class="three columns">
-                            <div class="project-panel" id="spacerace">
-                                <div class="project-link-hover">
-                                    <a class="project-link project-link-left" href="https://github.com/mriee/spaceRace" target="_blank" ><i class="fa fa-github"></i> Github</a>
-                                    <a class="project-link project-link-right" href="https://space-race-evolution.herokuapp.com/" target="_blank"><i class="fa fa-external-link"></i> Demo</a>
-                                </div>
-                                <div class="project-hover">
-                                    SpaceRace
-                                    <p>
-                                        A game based off of the concept of an 8-bit shooter that updates its controls and graphical style as the game progresses.
-                                    </p>
-                                    <p>
-                                        <br/>
-                                        Made with jQuery, phaser.js and Ruby on Rails
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="three columns">
-                            <div class="project-panel" id="cascadingstylequiz">
-                                <div class="project-link-hover">
-                                    <a class="project-link project-link-left" href="https://github.com/mriee/cascadingstylequiz" target="_blank" ><i class="fa fa-github"></i> Github</a>
-                                    <a class="project-link project-link-right" href="https://cascadingstylequiz.herokuapp.com/" target="_blank"><i class="fa fa-external-link"></i> Demo</a>
-                                </div>
-                                <div class="project-hover">
-                                    Cascading Style Quiz
-                                    <p>
-                                        A an app that presents the user with a variety of challenges where they must correctly style an element on the page.
-                                    </p>
-                                    <p>
-                                        <br/>
-                                        Made with jQuery and underscore.js.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="content" id="contact">
-                <a id="contact"></a>
-                <div id="triangle-contact"></div>
-                <h2>Contact</h2>
-                <ul>
-                    <li>
-                        <a href="https://github.com/mriee" target="_blank">
-                            <i class="fa fa-github-square"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://au.linkedin.com/in/alexwleeweb" target="_blank">
-                            <i class="fa fa-linkedin-square"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:alexwlee.web@gmail.com">
-                            <i class="fa fa-envelope-square"></i>
-                        </a>
-                    </li>
-                </ul>
-                <p>
-                    <i class="fa fa-mobile"></i> 0423 597 009<br/>
-                    <i class="fa fa-envelope-o"></i> alexwlee.web@gmail.com
-                </p>
-            </section>
-
-            <footer id="footer">
-                © Alex Lee 2016
-            </footer>
-        </div>
-
+    <div class="menu__button">
+      <i class="fa fa-bars"></i>
     </div>
-</body>
+
+    <section id="header">
+      <div class="banner banner--portrait"></div>
+      <div class="banner banner--fill"></div>
+      <div class="banner banner--code"></div>
+      <div class="banner banner-devIcons"></div>
+      <div class="banner banner--center">
+          <h1>I'm Alex Lee, welcome</h1>
+      </div>
+    </section>
+
+    <div class="main-content">
+      <div id="about"></div>
+      <section class="content" id="about-section">
+        <div id="triangle-about"></div>
+        <h2>About Me</h2>
+        <p>
+          I am a Web Developer with a deep passion for the front end experience. I find
+            working with html, css and javascript to be fun and rewarding and am eager to
+            explore further into the many possibilities they present when used together.
+        </p>
+        <p>
+          I am currently working for Ordermentum, a small company developing a web based
+          service for small retail business to easily manage orders to their suppliers.
+          My role involves using react, redux and css to maintain as well as produce new and
+            exciting features such as interface redesigns and new UI elements.
+        </p>
+        <a href="Resume - Alex Lee.pdf" target="_blank">
+          <div class="btn" id="resume">
+            <div class="btn-chevron" id="btn-chevron-border"></div>
+            <div class="btn-chevron" id="btn-chevron">
+              <span><i class="fa fa-file-pdf-o"></i> Resume</span>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <section class="content" id="skills">
+        <a id="skills"></a>
+        <div id="triangle-skills"></div>
+        <h2>Skills</h2>
+        <ul>
+          <li><i class="devicons devicons-html5"></i></li>
+          <li><i class="devicons devicons-css3"></i></li>
+          <li><i class="devicons devicons-sass"></i></li>
+          <li><i class="devicons devicons-javascript_badge"></i></li>
+          <li><i class="devicons devicons-jquery"></i></li>
+        </ul>
+        <ul>
+          <li><i class="devicons devicons-react"></i></li>
+          <li><i class="devicons devicons-postgresql"></i></li>
+          <li><i class="devicons devicons-github_badge"></i></li>
+          <li><i class="devicons devicons-photoshop"></i></li>
+          <li><i class="devicons devicons-visualstudio"></i>
+        </ul>
+        <ul>
+          <li><i class="devicons devicons-windows"></i></li>
+          <li><i class="devicons devicons-apple"></i></li>
+        </ul>
+      </section>
+
+      <section class="content" id="projects">
+        <a id="projects"></a>
+        <div id="triangle-projects"></div>
+        <h2>Projects</h2>
+        <div class="container">
+          <div class="row">
+
+            <div class="three columns">
+              <div class="project-panel" id="memory">
+                <div class="project-link-hover">
+                  <a class="project-link project-link-left" href="https://github.com/mriee/memory" target="_blank" ><i class="fa fa-github"></i> Github</a>
+                  <a class="project-link project-link-right" href="http://mriee.github.io/memory/" target="_blank"><i class="fa fa-external-link"></i> Demo</a>
+                </div>
+                <div class="project-hover">
+                  Memory
+                  <p>
+                    Memory is based on the card game memory. The aim is to reveal all the face-down cards on the board by revealing pairs of cards.
+                  </p>
+                  <p>
+                    <br/>
+                    Made with jQuery.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="three columns">
+              <div class="project-panel" id="interact">
+                <div class="project-link-hover">
+                  <a class="project-link project-link-left" href="https://github.com/mriee/interact" target="_blank" ><i class="fa fa-github"></i> Github</a>
+                  <a class="project-link project-link-right" href="https://interact-puzzle.herokuapp.com/" target="_blank"><i class="fa fa-external-link"></i> Demo</a>
+                </div>
+                <div class="project-hover">
+                  Interact Puzzles
+                  <p>
+                    Interact Puzzles is an app that converts images into interactive jigsaw puzzles.
+                  </p>
+                  <p>
+                    <br/>
+                    Made with jQuery and Ruby on Rails.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="three columns">
+              <div class="project-panel" id="spacerace">
+                <div class="project-link-hover">
+                  <a class="project-link project-link-left" href="https://github.com/mriee/spaceRace" target="_blank" ><i class="fa fa-github"></i> Github</a>
+                  <a class="project-link project-link-right" href="https://space-race-evolution.herokuapp.com/" target="_blank"><i class="fa fa-external-link"></i> Demo</a>
+                </div>
+                <div class="project-hover">
+                  SpaceRace
+                  <p>
+                    A game based off of the concept of an 8-bit shooter that updates its controls and graphical style as the game progresses.
+                  </p>
+                  <p>
+                    <br/>
+                    Made with jQuery, phaser.js and Ruby on Rails
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="three columns">
+              <div class="project-panel" id="cascadingstylequiz">
+                <div class="project-link-hover">
+                  <a class="project-link project-link-left" href="https://github.com/mriee/cascadingstylequiz" target="_blank" ><i class="fa fa-github"></i> Github</a>
+                  <a class="project-link project-link-right" href="https://cascadingstylequiz.herokuapp.com/" target="_blank"><i class="fa fa-external-link"></i> Demo</a>
+                </div>
+                <div class="project-hover">
+                  Cascading Style Quiz
+                  <p>
+                    A an app that presents the user with a variety of challenges where they must correctly style an element on the page.
+                  </p>
+                  <p>
+                    <br/>
+                    Made with jQuery and underscore.js.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content" id="contact">
+        <a id="contact"></a>
+        <div id="triangle-contact"></div>
+        <h2>Contact</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/mriee" target="_blank">
+              <i class="fa fa-github-square"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://au.linkedin.com/in/alexwleeweb" target="_blank">
+              <i class="fa fa-linkedin-square"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:alexwlee.web@gmail.com">
+              <i class="fa fa-envelope-square"></i>
+            </a>
+          </li>
+        </ul>
+        <p>
+          <i class="fa fa-mobile"></i> 0423 597 009<br/>
+          <i class="fa fa-envelope-o"></i> alexwlee.web@gmail.com
+        </p>
+      </section>
+
+      <footer id="footer">
+        © Alex Lee 2016
+      </footer>
+    </div>
+  </body>
 </html>
