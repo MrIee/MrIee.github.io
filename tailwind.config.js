@@ -15,6 +15,10 @@ module.exports = {
         '25': '100px',
         '18.75': '75px',
       },
+      backgroundImage: {
+        'rayure-blue': 'url(../images/rayure_blue.jpg)',
+        'simple-blue': 'url(../images/simple_blue.jpg)',
+      },
     },
   },
 };

@@ -163,3 +163,22 @@ h1 {
 .triangle--inverted.triangle--brightblue {
   @apply tw-border-t-transparent tw-border-r-bright-blue tw-border-b-bright-blue tw-border-l-bright-blue;
 }
+
+.content {
+  @apply tw-w-full tw-py-[50px] odd:tw-pt-18.75 odd:tw-bg-fixed odd:tw-bg-cover odd:tw-bg-center;
+}
+
+.content p {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: left;
+}
+
+.content--skills {
+  background-image: url(../images/rayure_blue.jpg);
+}
+
+.content--contact {
+  background-image: url(../images/simple_blue.jpg);
+}

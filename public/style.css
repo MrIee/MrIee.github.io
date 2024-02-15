@@ -669,6 +669,11 @@ video {
   border-top-color: transparent;
 }
 
+.tw-bg-bright-blue{
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 120 186 / var(--tw-bg-opacity));
+}
+
 .tw-bg-dark-gray{
   --tw-bg-opacity: 1;
   background-color: rgb(51 51 51 / var(--tw-bg-opacity));
@@ -682,6 +687,14 @@ video {
 .tw-bg-steel-blue{
   --tw-bg-opacity: 1;
   background-color: rgb(70 130 180 / var(--tw-bg-opacity));
+}
+
+.tw-bg-rayure-blue{
+  background-image: url(../images/rayure_blue.jpg);
+}
+
+.tw-bg-simple-blue{
+  background-image: url(../images/simple_blue.jpg);
 }
 
 .tw-bg-cover{
@@ -698,6 +711,11 @@ video {
 
 .tw-p-8{
   padding: 2rem;
+}
+
+.tw-py-\[50px\]{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .tw-text-5xl{
@@ -945,4 +963,44 @@ h1{
   border-bottom-color: rgb(26 120 186 / var(--tw-border-opacity));
   --tw-border-opacity: 1;
   border-left-color: rgb(26 120 186 / var(--tw-border-opacity));
+}
+
+.content{
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.content:nth-child(odd){
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding-top: 75px;
+}
+
+.content p {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: left;
+}
+
+.content--skills {
+  background-image: url(../images/rayure_blue.jpg);
+}
+
+.content--contact {
+  background-image: url(../images/simple_blue.jpg);
+}
+
+.odd\:tw-bg-cover:nth-child(odd){
+  background-size: cover;
+}
+
+.odd\:tw-bg-fixed:nth-child(odd){
+  background-attachment: fixed;
+}
+
+.odd\:tw-pt-18\.75:nth-child(odd){
+  padding-top: 75px;
 }
