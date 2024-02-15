@@ -16,12 +16,20 @@ body {
   @apply tw-text-dark-gray tw-bg-dark-gray;
 }
 
+h1, h2 {
+  font-family: 'Michroma';
+}
+
 h1 {
-  @apply tw-text-8xl;
+  @apply tw-text-4xl md:tw-text-6xl tw-px-4;
+}
+
+h2 {
+  @apply tw-text-3xl md:tw-text-4xl tw-mb-8;
 }
 
 .banner {
-  @apply tw-h-1/5 tw-w-full tw-absolute tw-top-2/5;
+  @apply tw-h-1/5 tw-w-full tw-text-center tw-absolute tw-top-2/5;
 }
 
 .banner--fill {
@@ -117,18 +125,16 @@ h1 {
 .menu__button {
   z-index: 99;
 
-  @apply tw-h-12
-  tw-w-12
-  tw-flex
+  @apply tw-flex
   tw-justify-center
   tw-items-center
-  tw-p-8
-  tw-text-5xl
+  tw-p-2
+  tw-text-3xl
   tw-rounded-sm
   tw-cursor-pointer
   tw-fixed
-  tw-top-6
-  tw-left-6;
+  tw-top-3
+  tw-left-3;
 }
 
 .menu__button:hover {
@@ -165,14 +171,11 @@ h1 {
 }
 
 .content {
-  @apply tw-w-full tw-py-[50px] odd:tw-pt-18.75 odd:tw-bg-fixed odd:tw-bg-cover odd:tw-bg-center;
+  @apply tw-w-full tw-py-[50px] tw-text-center odd:tw-pt-18.75 odd:tw-bg-fixed odd:tw-bg-cover odd:tw-bg-center;
 }
 
 .content p {
-  width: 70%;
-  margin: 0 auto;
-  padding: 1rem;
-  text-align: left;
+  @apply tw-w-[70%] tw-mx-auto tw-p-4;
 }
 
 .content--skills {
