@@ -1,0 +1,42 @@
+.menu {
+  @apply tw-h-full
+  tw-w-full
+  tw-bg-dark-gray
+  tw-transition
+  tw-ease-out
+  tw-duration-500
+  tw-fixed
+  -tw-top-full
+  tw-z-[98];
+}
+
+.menu .menu__item {
+  font-family: 'Michroma', sans-serif;
+  transition: color 0.2s ease-in, background-color 0.25s ease-in;
+
+  @apply tw-h-1/4
+  tw-w-full
+  tw-flex
+  tw-justify-center
+  tw-items-center
+  tw-text-7xl
+  hover:tw-text-dark-gray
+  hover:tw-bg-steel-blue
+  tw-text-gray-300;
+}
+
+.menu__button {
+  @apply tw-flex
+  tw-justify-center
+  tw-items-center
+  tw-p-2
+  tw-text-3xl
+  hover:tw-bg-gray-400
+  hover:tw-bg-opacity-50
+  tw-rounded-sm
+  tw-cursor-pointer
+  tw-fixed
+  tw-top-3
+  tw-left-3
+  tw-z-[99];
+}

@@ -1,10 +1,13 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Michroma);
+@import 'menu.css';
+@import 'banner.css';
+@import 'content.css';
+@import 'triangle.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 html, body {
   @apply tw-h-full tw-m-0 tw-p-0;
@@ -20,168 +23,6 @@ h1, h2 {
   font-family: 'Michroma';
 }
 
-h1 {
-  @apply tw-text-4xl md:tw-text-6xl tw-px-4;
-}
-
 h2 {
   @apply tw-text-3xl md:tw-text-4xl tw-mb-8;
-}
-
-.banner {
-  @apply tw-h-1/5 tw-w-full tw-text-center tw-absolute tw-top-2/5;
-}
-
-.banner--fill {
-  @apply tw-h-2/5 tw-bg-dark-gray tw-absolute tw-z-20;
-}
-
-.banner--portrait {
-  background-image: url(../images/portrait-bw.jpg);
-  animation: bannerPortrait 1s ease-out;
-  animation-fill-mode: forwards;
-  animation-delay: 0.4s;
-
-  @apply tw-h-2/5 tw-bg-center tw-bg-cover tw-z-10;
-}
-
-.banner--code {
-  background-image: url(../images/code.jpg);
-  animation: bannerCode 0.5s ease-out;
-  animation-fill-mode: forwards;
-  animation-delay: 0.4s;
-  box-shadow: 0px 3px 10px 1px #000;
-
-  @apply tw-bg-center tw-bg-cover tw-top-2/5 tw-z-30;
-}
-
-.banner-devIcons {
-  background-image: url(../images/code-icons.jpg);
-  animation: bannerDevIcons 0.5s ease-out;
-  animation-fill-mode: forwards;
-  animation-delay: 0.9s;
-
-  @apply tw-bg-bottom tw-bg-cover tw-top-2/5 tw-z-20;
-}
-
-.banner--center {
-  height: calc(100vh * 0.2);
-  background-image: url(../images/shattered.png);
-  animation: bannerCenter 1s ease-in;
-  animation-fill-mode: forwards;
-  animation-delay: 1.4s;
-  box-shadow: 0px 0px 16px 6px #333;
-
-  @apply tw-flex tw-justify-center tw-items-center tw-text-transparent tw-bg-steel-blue tw-z-40;
-}
-
-@keyframes bannerPortrait {
-  100% {
-    @apply tw-top-0;
-  }
-}
-
-@keyframes bannerCode {
-  100% {
-    top: 60%;
-  }
-}
-
-@keyframes bannerDevIcons {
-  100% {
-    top: 80%;
-  }
-}
-
-@keyframes bannerCenter {
-  100% {
-    @apply tw-text-dark-gray;
-  }
-}
-
-.menu {
-  z-index: 98;
-
-  @apply tw-h-full tw-w-full tw-bg-dark-gray tw-transition tw-ease-out tw-duration-500 tw-fixed -tw-top-full;
-}
-
-.menu .menu__item {
-  font-family: 'Michroma', sans-serif;
-  transition: color 0.2s ease-in, background-color 0.25s ease-in;
-
-  @apply tw-h-1/4
-  tw-w-full
-  tw-flex
-  tw-justify-center
-  tw-items-center
-  tw-text-7xl
-  tw-text-gray-300;
-}
-
-.menu .menu__item:hover {
-  @apply tw-text-dark-gray tw-bg-steel-blue;
-}
-
-.menu__button {
-  z-index: 99;
-
-  @apply tw-flex
-  tw-justify-center
-  tw-items-center
-  tw-p-2
-  tw-text-3xl
-  tw-rounded-sm
-  tw-cursor-pointer
-  tw-fixed
-  tw-top-3
-  tw-left-3;
-}
-
-.menu__button:hover {
-  @apply tw-bg-gray-400 tw-bg-opacity-50;
-}
-
-.triangle {
-  border-top: 50px solid transparent;
-  border-right: 49vw solid transparent;
-  border-bottom: 0px solid transparent;
-  border-left: 49vw solid transparent;
-
-  @apply tw-h-0 tw-w-full tw-relative -tw-top-18.75
-}
-
-.triangle--inverted {
-  @apply tw-h-0 tw-w-full tw-relative -tw-top-25;
-}
-
-.triangle--steelblue {
-  @apply tw-border-t-steel-blue;
-}
-
-.triangle--brightblue {
-  @apply tw-border-t-bright-blue;
-}
-
-.triangle--inverted.triangle--steelblue {
-  @apply tw-border-t-transparent tw-border-r-steel-blue tw-border-b-steel-blue tw-border-l-steel-blue;
-}
-
-.triangle--inverted.triangle--brightblue {
-  @apply tw-border-t-transparent tw-border-r-bright-blue tw-border-b-bright-blue tw-border-l-bright-blue;
-}
-
-.content {
-  @apply tw-w-full tw-py-[50px] tw-text-center odd:tw-pt-18.75 odd:tw-bg-fixed odd:tw-bg-cover odd:tw-bg-center;
-}
-
-.content p {
-  @apply tw-w-[70%] tw-mx-auto tw-p-4;
-}
-
-.content--skills {
-  background-image: url(../images/rayure_blue.jpg);
-}
-
-.content--contact {
-  background-image: url(../images/simple_blue.jpg);
 }

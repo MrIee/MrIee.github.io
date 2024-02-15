@@ -1,0 +1,15 @@
+.content {
+  @apply tw-w-full tw-py-[50px] tw-text-center odd:tw-pt-18.75 odd:tw-bg-fixed odd:tw-bg-cover odd:tw-bg-center;
+}
+
+.content p {
+  @apply tw-w-[70%] tw-mx-auto tw-p-4;
+}
+
+.content--skills {
+  background-image: url(../images/rayure_blue.jpg);
+}
+
+.content--contact {
+  background-image: url(../images/simple_blue.jpg);
+}
