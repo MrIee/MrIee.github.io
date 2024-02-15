@@ -134,3 +134,32 @@ h1 {
 .menu__button:hover {
   @apply tw-bg-gray-400 tw-bg-opacity-50;
 }
+
+.triangle {
+  border-top: 50px solid transparent;
+  border-right: 49vw solid transparent;
+  border-bottom: 0px solid transparent;
+  border-left: 49vw solid transparent;
+
+  @apply tw-h-0 tw-w-full tw-relative -tw-top-18.75
+}
+
+.triangle--inverted {
+  @apply tw-h-0 tw-w-full tw-relative -tw-top-25;
+}
+
+.triangle--steelblue {
+  @apply tw-border-t-steel-blue;
+}
+
+.triangle--brightblue {
+  @apply tw-border-t-bright-blue;
+}
+
+.triangle--inverted.triangle--steelblue {
+  @apply tw-border-t-transparent tw-border-r-steel-blue tw-border-b-steel-blue tw-border-l-steel-blue;
+}
+
+.triangle--inverted.triangle--brightblue {
+  @apply tw-border-t-transparent tw-border-r-bright-blue tw-border-b-bright-blue tw-border-l-bright-blue;
+}

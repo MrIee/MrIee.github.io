@@ -556,6 +556,18 @@ video {
   position: absolute;
 }
 
+.tw-relative{
+  position: relative;
+}
+
+.-tw-top-18\.75{
+  top: -75px;
+}
+
+.tw-left-0{
+  left: 0px;
+}
+
 .tw-top-0{
   top: 0px;
 }
@@ -568,12 +580,20 @@ video {
   top: 1.5rem;
 }
 
+.tw-top-\[calc\(100\%\+50px\)\]{
+  top: calc(100% + 50px);
+}
+
 .tw-m-0{
   margin: 0px;
 }
 
 .tw-flex{
   display: flex;
+}
+
+.tw-h-0{
+  height: 0px;
 }
 
 .tw-h-1\/4{
@@ -623,6 +643,30 @@ video {
 
 .tw-rounded-sm{
   border-radius: 0.125rem;
+}
+
+.tw-border-b-bright-blue{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(26 120 186 / var(--tw-border-opacity));
+}
+
+.tw-border-b-steel-blue{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(70 130 180 / var(--tw-border-opacity));
+}
+
+.tw-border-r-bright-blue{
+  --tw-border-opacity: 1;
+  border-right-color: rgb(26 120 186 / var(--tw-border-opacity));
+}
+
+.tw-border-r-steel-blue{
+  --tw-border-opacity: 1;
+  border-right-color: rgb(70 130 180 / var(--tw-border-opacity));
+}
+
+.tw-border-t-transparent{
+  border-top-color: transparent;
 }
 
 .tw-bg-dark-gray{
@@ -857,4 +901,48 @@ h1{
 .menu__button:hover{
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.5;
+}
+
+.triangle {
+  border-top: 50px solid transparent;
+  border-right: 49vw solid transparent;
+  border-bottom: 0px solid transparent;
+  border-left: 49vw solid transparent;
+  position: relative;
+  top: -75px;
+  height: 0px;
+  width: 100%
+}
+
+.triangle--inverted{
+  position: relative;
+  top: -100px;
+  height: 0px;
+  width: 100%;
+}
+
+.triangle--steelblue{
+  --tw-border-opacity: 1;
+  border-top-color: rgb(70 130 180 / var(--tw-border-opacity));
+}
+
+.triangle--brightblue{
+  --tw-border-opacity: 1;
+  border-top-color: rgb(26 120 186 / var(--tw-border-opacity));
+}
+
+.triangle--inverted.triangle--steelblue{
+  border-top-color: transparent;
+  border-right-color: rgb(70 130 180 / var(--tw-border-opacity));
+  border-bottom-color: rgb(70 130 180 / var(--tw-border-opacity));
+  --tw-border-opacity: 1;
+  border-left-color: rgb(70 130 180 / var(--tw-border-opacity));
+}
+
+.triangle--inverted.triangle--brightblue{
+  border-top-color: transparent;
+  border-right-color: rgb(26 120 186 / var(--tw-border-opacity));
+  border-bottom-color: rgb(26 120 186 / var(--tw-border-opacity));
+  --tw-border-opacity: 1;
+  border-left-color: rgb(26 120 186 / var(--tw-border-opacity));
 }
