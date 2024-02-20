@@ -21,8 +21,10 @@ body {
   @apply tw-text-gray-800 tw-bg-dark-gray;
 }
 
-h1, h2 {
-  font-family: 'Michroma';
+h1, h2, h3 {
+  font-family: "Michroma", sans-serif;
+
+  @apply tw-text-center;
 }
 
 h2 {
