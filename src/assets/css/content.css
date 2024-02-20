@@ -10,8 +10,8 @@
   odd:tw-bg-center;
 }
 
-.content p {
-  @apply tw-w-[70%] tw-mx-auto tw-p-4;
+.content > p {
+  @apply tw-w-11/12 sm:tw-w-10/12 lg:tw-w-[70%] tw-mx-auto tw-p-4;
 }
 
 .content--skills {

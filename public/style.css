@@ -166,11 +166,23 @@
   padding-top: 75px;
 }
 
-.content p{
+.content > p{
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 91.666667%;
   padding: 1rem;
+}
+
+@media (min-width: 640px){
+  .content > p{
+    width: 83.333333%;
+  }
+}
+
+@media (min-width: 1024px){
+  .content > p{
+    width: 70%;
+  }
 }
 
 .content--skills {
@@ -273,8 +285,30 @@
 
 .project-card{
   position: relative;
-  height: 15rem;
-  width: 15rem;
+  margin-bottom: 4rem;
+  width: 75%;
+}
+
+.project-card:last-child{
+  margin-right: 0px;
+}
+
+@media (min-width: 640px){
+  .project-card{
+    margin-bottom: 3rem;
+    margin-right: 1.25rem;
+    height: 15rem;
+    width: 15rem;
+  }
+}
+
+.project-card h3,
+.project-card__btn {
+  font-family: "Michroma", sans-serif;
+}
+
+.project-card h3{
+  margin-bottom: 0.5rem;
 }
 
 .project-card img{
@@ -282,30 +316,107 @@
   width: 100%;
 }
 
-.project-card__btn {
-  font-family: "Michroma", sans-serif;
+.project-card__info{
   position: absolute;
-  bottom: 0px;
-  z-index: 10;
   display: flex;
-  height: 1.5rem;
-  width: 50%;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  --tw-bg-opacity: 1;
-  background-color: rgb(135 206 250 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.8;
+  padding: 0.75rem;
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.project-card__info:hover,
+.project-card__btn:hover ~ .project-card__info{
+  opacity: 1;
+}
+
+.project-card__btn{
+  position: absolute;
+  bottom: -1rem;
+  z-index: 0;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
   font-size: 0.75rem;
   line-height: 1rem;
 }
 
+@media (min-width: 640px){
+  .project-card__btn{
+    bottom: -3rem;
+  }
+}
+
+.project-card__btn--left i,
+.project-card__btn--right i{
+  margin-right: 0.25rem;
+}
+
+.project-card__btn--left {
+  /* Set width to 51% to fix space appearing between buttons in mobile view */
+  left: 0px;
+  width: 51%;
+}
+
+.project-card__btn--right{
+  right: 0px;
+  width: 50%;
+}
+
+.project-card__btn--left:after,
+.project-card__btn--right:after {
+  content: '';
+  position: absolute;
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(135 206 250 / var(--tw-bg-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.project-card__btn--left:after{
+  --tw-skew-y: 4deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.project-card__btn--right:after{
+  --tw-skew-y: -4deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.project-card__btn--left:hover,
+.project-card__btn--right:hover{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.project-card__btn--left:hover:after,
+.project-card__btn--right:hover:after{
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+}
+
+/*
 .project-card__btn:hover
 {
   background-color: #1a78ba;
 }
 
-.project-card__btn-left .fa{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+.project-card__btn-left .fa {
+  @apply tw-text-sm;
 }
 
 .project-card__btn-left:before {
@@ -374,11 +485,9 @@
 
 .project-card__btn-left {
   left: 0;
-}
+} */
 
-/*
-! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
-*/
+/* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -934,6 +1043,10 @@ video {
   position: relative;
 }
 
+.-tw-bottom-4{
+  bottom: -1rem;
+}
+
 .-tw-top-18\.75{
   top: -75px;
 }
@@ -944,10 +1057,6 @@ video {
 
 .-tw-top-full{
   top: -100%;
-}
-
-.tw-bottom-0{
-  bottom: 0px;
 }
 
 .tw-left-0{
@@ -999,6 +1108,14 @@ video {
   margin-right: auto;
 }
 
+.tw-mb-16{
+  margin-bottom: 4rem;
+}
+
+.tw-mb-2{
+  margin-bottom: 0.5rem;
+}
+
 .tw-mb-8{
   margin-bottom: 2rem;
 }
@@ -1031,14 +1148,6 @@ video {
   height: 40%;
 }
 
-.tw-h-6{
-  height: 1.5rem;
-}
-
-.tw-h-60{
-  height: 15rem;
-}
-
 .tw-h-8{
   height: 2rem;
 }
@@ -1051,16 +1160,20 @@ video {
   width: 50%;
 }
 
+.tw-w-11\/12{
+  width: 91.666667%;
+}
+
 .tw-w-36{
   width: 9rem;
 }
 
-.tw-w-60{
-  width: 15rem;
+.tw-w-9\/12{
+  width: 75%;
 }
 
-.tw-w-\[70\%\]{
-  width: 70%;
+.tw-w-\[51\%\]{
+  width: 51%;
 }
 
 .tw-w-full{
@@ -1140,6 +1253,15 @@ video {
   background-color: rgb(70 130 180 / var(--tw-bg-opacity));
 }
 
+.tw-bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.tw-bg-opacity-80{
+  --tw-bg-opacity: 0.8;
+}
+
 .tw-bg-rayure-blue{
   background-image: url(../images/rayure_blue.jpg);
 }
@@ -1162,6 +1284,10 @@ video {
 
 .tw-p-2{
   padding: 0.5rem;
+}
+
+.tw-p-3{
+  padding: 0.75rem;
 }
 
 .tw-px-4{
@@ -1236,6 +1362,10 @@ video {
   color: transparent;
 }
 
+.tw-opacity-0{
+  opacity: 0;
+}
+
 .tw-transition{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1250,6 +1380,12 @@ video {
   transition-duration: 150ms;
 }
 
+.tw-transition-opacity{
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .tw-duration-300{
   transition-duration: 300ms;
 }
@@ -1260,6 +1396,10 @@ video {
 
 .tw-duration-\[250\]{
   transition-duration: 250;
+}
+
+.tw-duration-\[250ms\]{
+  transition-duration: 250ms;
 }
 
 .tw-ease-out{
@@ -1297,6 +1437,10 @@ h2{
   }
 }
 
+.last\:tw-mr-0:last-child{
+  margin-right: 0px;
+}
+
 .odd\:tw-bg-cover:nth-child(odd){
   background-size: cover;
 }
@@ -1328,6 +1472,36 @@ h2{
   color: rgb(51 51 51 / var(--tw-text-opacity));
 }
 
+@media (min-width: 640px){
+  .sm\:-tw-bottom-12{
+    bottom: -3rem;
+  }
+
+  .sm\:tw-mb-12{
+    margin-bottom: 3rem;
+  }
+
+  .sm\:tw-mr-5{
+    margin-right: 1.25rem;
+  }
+
+  .sm\:tw-h-60{
+    height: 15rem;
+  }
+
+  .sm\:tw-w-10\/12{
+    width: 83.333333%;
+  }
+
+  .sm\:tw-w-60{
+    width: 15rem;
+  }
+
+  .sm\:tw-flex-row{
+    flex-direction: row;
+  }
+}
+
 @media (min-width: 768px){
   .md\:tw-text-4xl{
     font-size: 2.25rem;
@@ -1337,5 +1511,11 @@ h2{
   .md\:tw-text-6xl{
     font-size: 3.75rem;
     line-height: 1;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:tw-w-\[70\%\]{
+    width: 70%;
   }
 }

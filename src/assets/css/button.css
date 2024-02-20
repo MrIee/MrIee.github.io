@@ -29,7 +29,7 @@
   tw-top-0
   -tw-z-10
   tw-transition-colors
-  tw-duration-300
+  tw-duration-[250ms]
   tw-ease-in;
 }
 
