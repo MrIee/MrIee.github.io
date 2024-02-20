@@ -54,7 +54,7 @@
 }
 
 .btn-chevron:hover {
-  @apply tw-text-gray-300;
+  @apply tw-text-light-sky-blue;
 }
 
 .btn-chevron:hover:before,

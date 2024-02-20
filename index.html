@@ -57,25 +57,36 @@
         <a id="projects"></a>
         <div class="triangle triangle--inverted"></div>
         <h2>Projects</h2>
-        <div class="tw-flex tw-flex-col sm:tw-flex-row tw-justify-center tw-items-center">
+        <div class="tw-flex tw-flex-col sm:tw-flex-row tw-justify-center tw-items-center sm:tw-items-start">
           <div class="project-card">
             <h3>Adventure Sheet</h3>
+            <div class="project-card__middle">
+              <img src="./images/adventure-sheet.png" alt="movie quiz site screenshot">
+              <a class="project-card__btn project-card__btn--left" href="https://github.com/mriee/choose-your-own-adventure-sheet" target="_blank" >
+                <i class="fa fa-github tw-text-sm"></i>Github
+              </a>
+              <a class="project-card__btn project-card__btn--right" href="http://adventuresheet.42web.io/" target="_blank">
+                <i class="fa fa-external-link"></i>Demo
+              </a>
+            </div>
             <div class="project-card__info">
               <p>
                 This project aims to replicate an Adventure sheet used in the popular series of Fighting Fantasy books
                 by Steve Jackson and Ian Livingstone.
               </p>
             </div>
-            <img src="./images/adventure-sheet.png" alt="movie quiz site screenshot">
-            <a class="project-card__btn project-card__btn--left" href="https://github.com/mriee/choose-your-own-adventure-sheet" target="_blank" >
-              <i class="fa fa-github tw-text-sm"></i>Github
-            </a>
-            <a class="project-card__btn project-card__btn--right" href="http://adventuresheet.42web.io/" target="_blank">
-              <i class="fa fa-external-link"></i>Demo
-            </a>
           </div>
           <div class="project-card">
             <h3>Movie Quiz</h3>
+            <div class="project-card__middle">
+              <img src="./images/movie-quiz.png" alt="movie quiz site screenshot">
+              <a class="project-card__btn project-card__btn--left" href="https://github.com/mriee/react-movie-quiz" target="_blank" >
+                <i class="fa fa-github tw-text-sm"></i>Github
+              </a>
+              <a class="project-card__btn project-card__btn--right" href="http://moviequiz.42web.io/" target="_blank">
+                <i class="fa fa-external-link"></i>Demo
+              </a>
+            </div>
             <div class="project-card__info">
               <p class="tw-mb-2">
                 Movie Quiz is a small project I created to learn React and play around with an api. I chose The Move
@@ -83,13 +94,6 @@
               </p>
               <p>Enjoy!</p>
             </div>
-            <img src="./images/movie-quiz.png" alt="movie quiz site screenshot">
-            <a class="project-card__btn project-card__btn--left" href="https://github.com/mriee/react-movie-quiz" target="_blank" >
-              <i class="fa fa-github tw-text-sm"></i>Github
-            </a>
-            <a class="project-card__btn project-card__btn--right" href="http://moviequiz.42web.io/" target="_blank">
-              <i class="fa fa-external-link"></i>Demo
-            </a>
           </div>
         </div>
       </section>
@@ -99,30 +103,27 @@
         <div class="triangle"></div>
         <h2>Contact</h2>
         <ul>
-          <li>
-            <a href="https://github.com/mriee" target="_blank">
-              <i class="fa fa-github-square"></i>
-            </a>
+          <li class="contact__list-item">
+            <a href="https://github.com/mriee" target="_blank"><i class="fa fa-github-square"></i></a>
+            <a href="https://github.com/mriee" target="_blank">Github</a>
           </li>
-          <li>
-            <a href="https://au.linkedin.com/in/alexwleeweb" target="_blank">
-              <i class="fa fa-linkedin-square"></i>
-            </a>
+          <li class="contact__list-item">
+            <a href="https://au.linkedin.com/in/alexwleeweb" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            <a href="https://au.linkedin.com/in/alexwleeweb" target="_blank">Linkedin</a>
           </li>
-          <li>
-            <a href="mailto:alexwlee.web@gmail.com">
-              <i class="fa fa-envelope-square"></i>
-            </a>
+          <li class="contact__list-item">
+            <a href="mailto:alexwlee.web@gmail.com"><i class="fa fa-envelope-o"></i></a>
+            <a href="mailto:alexwlee.web@gmail.com">alexwlee.web@gmail.com</a>
+          </li>
+          <li class="contact__list-item">
+            <i class="fa fa-mobile"></i> 0423 597 009
           </li>
         </ul>
-        <p>
-          <i class="fa fa-mobile"></i> 0423 597 009<br/>
-          <i class="fa fa-envelope-o"></i> alexwlee.web@gmail.com
         </p>
       </section>
 
       <footer class="tw-h-8 tw-w-full tw-flex tw-justify-center tw-items-center tw-text-xs tw-text-steel-blue tw-bg-dark-gray">
-        © Alex Lee 2016
+        Created by Alex Lee. See my <a class="tw-ml-1" href="https://github.com/MrIee?tab=repositories" target="_blank">github page</a>
       </footer>
     </div>
   </body>
