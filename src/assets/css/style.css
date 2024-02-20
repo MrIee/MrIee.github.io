@@ -3,7 +3,9 @@
 @import 'menu.css';
 @import 'banner.css';
 @import 'content.css';
+@import 'button.css';
 @import 'triangle.css';
+@import 'project-card.css';
 
 @tailwind base;
 @tailwind components;
@@ -16,7 +18,7 @@ html, body {
 body {
   font-family: 'Helvetica';
 
-  @apply tw-text-dark-gray tw-bg-dark-gray;
+  @apply tw-text-gray-800 tw-bg-dark-gray;
 }
 
 h1, h2 {

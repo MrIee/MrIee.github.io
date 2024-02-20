@@ -1,0 +1,99 @@
+.project-card {
+  @apply tw-h-60 tw-w-60 tw-relative;
+}
+
+.project-card img {
+  @apply tw-h-full tw-w-full;
+}
+
+.project-card__btn {
+  font-family: "Michroma", sans-serif;
+
+  @apply tw-h-6
+  tw-w-1/2
+  tw-flex
+  tw-justify-center
+  tw-items-center
+  tw-text-xs
+  tw-bg-light-sky-blue
+  tw-absolute
+  tw-bottom-0
+  tw-z-10;
+}
+
+.project-card__btn:hover
+{
+  background-color: #1a78ba;
+}
+
+.project-card__btn-left .fa {
+  @apply tw-text-sm;
+}
+
+.project-card__btn-left:before {
+  content: "";
+  height: 0;
+  width: 0;
+  border-bottom: 10px solid lightskyblue;
+  border-right: 120px solid transparent;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+
+.project-card__btn-left:after {
+  content: "";
+  height: 0;
+  width: 0;
+  border-top: 10px solid lightskyblue;
+  border-left: 120px solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.project-card__btn-right {
+  right: 0;
+}
+
+.project-card__btn-right:before {
+  content: "";
+  height: 0;
+  width: 0;
+  border-bottom: 10px solid lightskyblue;
+  border-left: 120px solid transparent;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+
+.project-card__btn-right:after {
+  content: "";
+  height: 0;
+  width: 0;
+  border-top: 10px solid lightskyblue;
+  border-right: 120px solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.project-card__btn-left:hover:before {
+  border-bottom: 10px solid dodgerblue;
+}
+
+.project-card__btn-left:hover:after {
+  border-top: 10px solid dodgerblue;
+}
+
+.project-card__btn-right:hover:before {
+  border-bottom: 10px solid dodgerblue;
+}
+
+.project-card__btn-right:hover:after {
+  border-top: 10px solid dodgerblue;
+}
+
+.project-card__btn-left {
+  left: 0;
+}

@@ -1,0 +1,63 @@
+.btn-chevron {
+  font-family: "Michroma", sans-serif;
+
+  @apply tw-h-12
+  tw-w-36
+  tw-flex
+  tw-justify-center
+  tw-items-center
+  tw-text-sm
+  tw-text-center
+  tw-text-dark-gray
+  tw-relative
+  tw-z-0;
+}
+
+.btn-chevron,
+.btn-chevron:before,
+.btn-chevron:after {
+  @apply tw-transition-colors tw-duration-300 tw-ease-in;
+}
+
+.btn-chevron:before,
+.btn-chevron:after {
+  content: '';
+
+  @apply tw-h-full
+  tw-w-1/2
+  tw-absolute
+  tw-top-0
+  -tw-z-10
+  tw-transition-colors
+  tw-duration-300
+  tw-ease-in;
+}
+
+.btn-chevron:before,
+.btn-chevron:after {
+  @apply tw-h-full
+  tw-w-1/2
+  tw-bg-light-sky-blue
+  tw-absolute
+  tw-top-0
+  tw-transition-colors
+  tw-duration-[250]
+  tw-ease-in;
+}
+
+.btn-chevron:before {
+  @apply tw-left-0 tw-skew-y-[4deg];
+}
+
+.btn-chevron:after {
+  @apply tw-right-0 -tw-skew-y-[4deg];
+}
+
+.btn-chevron:hover {
+  @apply tw-text-gray-300;
+}
+
+.btn-chevron:hover:before,
+.btn-chevron:hover:after {
+  @apply tw-bg-dark-gray;
+}
