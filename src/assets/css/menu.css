@@ -1,17 +1,22 @@
 .menu {
   @apply tw-h-full
+  lg:tw-h-auto
   tw-w-full
-  tw-bg-dark-gray
   tw-transition
   tw-ease-out
   tw-duration-500
   tw-fixed
   -tw-top-full
+  lg:tw-top-0
   tw-z-[98];
 }
 
+.menu ul {
+  @apply tw-h-full lg:tw-w-full lg:tw-flex lg:tw-justify-center tw-bg-dark-gray;
+}
+
 .menu a {
-  @apply tw-no-underline;
+  @apply tw-h-full tw-w-full tw-flex tw-justify-center tw-items-center lg:tw-py-3 lg:tw-px-5 tw-no-underline;
 }
 
 .menu .menu__item {
@@ -20,17 +25,17 @@
 
   @apply tw-h-1/4
   tw-w-full
-  tw-flex
-  tw-justify-center
-  tw-items-center
-  tw-text-7xl
+  lg:tw-w-auto
+  tw-text-5xl
+  lg:tw-text-sm
   hover:tw-text-dark-gray
   hover:tw-bg-steel-blue
   tw-text-gray-300;
 }
 
 .menu__button {
-  @apply tw-flex
+  @apply lg:tw-hidden
+  tw-flex
   tw-justify-center
   tw-items-center
   tw-p-2

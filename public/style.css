@@ -8,8 +8,6 @@
   z-index: 98;
   height: 100%;
   width: 100%;
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
@@ -18,19 +16,51 @@
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+@media (min-width: 1024px){
+  .menu{
+    top: 0px;
+    height: auto;
+  }
+}
+
+.menu ul{
+  height: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 1024px){
+  .menu ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .menu a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   text-decoration-line: none;
+}
+
+@media (min-width: 1024px){
+  .menu a{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 
 .menu .menu__item {
   font-family: 'Michroma', sans-serif;
   transition: color 0.2s ease-in, background-color 0.25s ease-in;
-  display: flex;
   height: 25%;
   width: 100%;
-  align-items: center;
-  justify-content: center;
-  font-size: 4.5rem;
+  font-size: 3rem;
   line-height: 1;
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
@@ -41,6 +71,14 @@
   background-color: rgb(70 130 180 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px){
+  .menu .menu__item{
+    width: auto;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 .menu__button{
@@ -61,6 +99,12 @@
 .menu__button:hover{
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.5;
+}
+
+@media (min-width: 1024px){
+  .menu__button{
+    display: none;
+  }
 }
 
 .banner{
@@ -1279,8 +1323,8 @@ video {
   line-height: 2.5rem;
 }
 
-.tw-text-7xl{
-  font-size: 4.5rem;
+.tw-text-5xl{
+  font-size: 3rem;
   line-height: 1;
 }
 
@@ -1503,8 +1547,51 @@ a{
 }
 
 @media (min-width: 1024px){
+  .lg\:tw-top-0{
+    top: 0px;
+  }
+
+  .lg\:tw-flex{
+    display: flex;
+  }
+
+  .lg\:tw-hidden{
+    display: none;
+  }
+
+  .lg\:tw-h-auto{
+    height: auto;
+  }
+
   .lg\:tw-w-\[70\%\]{
     width: 70%;
+  }
+
+  .lg\:tw-w-auto{
+    width: auto;
+  }
+
+  .lg\:tw-w-full{
+    width: 100%;
+  }
+
+  .lg\:tw-justify-center{
+    justify-content: center;
+  }
+
+  .lg\:tw-px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .lg\:tw-py-3{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .lg\:tw-text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
