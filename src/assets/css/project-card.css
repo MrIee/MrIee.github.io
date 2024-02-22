@@ -1,32 +1,25 @@
 .project-card {
-  @apply tw-w-9/12 sm:tw-w-60 sm:tw-mr-8 last:tw-mr-0 tw-mb-8 last:tw-mb-0 sm:tw-mb-0;
-}
-
-.project-card h3,
-.project-card__btn {
-  font-family: "Michroma", sans-serif;
-}
-
-.project-card h3 {
-  @apply tw-mb-2;
+  @apply tw-flex tw-flex-col xl:tw-flex-row tw-items-center xl:tw-items-start;
 }
 
 .project-card img {
-  @apply tw-h-auto sm:tw-h-60 tw-w-full tw-mb-10;
+  @apply sm:tw-h-60 tw-max-w-none tw-w-full sm:tw-w-60;
 }
 
 .project-card__middle {
-  @apply tw-relative;
+  @apply sm:tw-h-60 sm:tw-w-60 sm:tw-mr-6 tw-mb-14 xl:tw-mb-0 tw-relative;
 }
 
 .project-card__btn {
+  font-family: "Michroma", sans-serif;
+
   @apply tw-h-8
   tw-flex
   tw-justify-center
   tw-items-center
   tw-text-xs
   tw-absolute
-  -tw-bottom-6
+  -tw-bottom-4
   sm:-tw-bottom-7
   tw-z-0;
 }
@@ -75,4 +68,8 @@
 .project-card__btn--left:hover:after,
 .project-card__btn--right:hover:after {
   @apply tw-bg-dark-gray;
+}
+
+.project-card__info {
+  @apply tw-min-h-[266px] tw-flex tw-flex-col;
 }

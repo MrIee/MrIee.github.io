@@ -16,7 +16,7 @@
 }
 
 .banner--code {
-  background-image: url(../images/code.jpg);
+  background-image: url(../images/code-perspective.png);
   animation: bannerCode 0.5s ease-out;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;

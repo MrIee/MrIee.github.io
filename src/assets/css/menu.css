@@ -10,6 +10,10 @@
   tw-z-[98];
 }
 
+.menu a {
+  @apply tw-no-underline;
+}
+
 .menu .menu__item {
   font-family: 'Michroma', sans-serif;
   transition: color 0.2s ease-in, background-color 0.25s ease-in;
