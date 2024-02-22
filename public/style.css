@@ -286,6 +286,14 @@
   border-left-color: rgb(70 130 180 / var(--tw-border-opacity));
 }
 
+ul.skill-list{
+  text-align: center;
+}
+
+.skill-list li{
+  margin-bottom: 0.5rem;
+}
+
 .project-card{
   display: flex;
   flex-direction: column;

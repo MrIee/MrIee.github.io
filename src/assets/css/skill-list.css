@@ -1,0 +1,7 @@
+ul.skill-list {
+  @apply tw-text-center;
+}
+
+.skill-list li {
+  @apply tw-mb-2;
+}
