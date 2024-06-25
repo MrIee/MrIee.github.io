@@ -8,6 +8,7 @@
 @import 'skill-list.css';
 @import 'project-card.css';
 @import 'contact.css';
+@import 'grid.css';
 
 @tailwind base;
 @tailwind components;

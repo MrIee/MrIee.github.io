@@ -1,0 +1,22 @@
+.grid {
+  @apply tw-w-full
+  xl:tw-w-9/12
+  tw-flex
+  tw-flex-col
+  sm:tw-flex-row
+  tw-justify-center
+  sm:tw-justify-start
+  tw-items-center
+  sm:tw-items-start
+  tw-flex-wrap
+  tw-mx-auto;
+}
+
+.grid-item {
+  @apply tw-w-3/4
+  sm:tw-w-[calc(50%-32px)]
+  sm:tw-mr-8
+  last:tw-mr-0
+  tw-mb-8
+  last:tw-mb-0;
+}

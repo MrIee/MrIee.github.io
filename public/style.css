@@ -473,6 +473,48 @@ ul.skill-list{
   line-height: 2rem;
 }
 
+.grid{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px){
+  .grid{
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1280px){
+  .grid{
+    width: 75%;
+  }
+}
+
+.grid-item{
+  margin-bottom: 2rem;
+  width: 75%;
+}
+
+.grid-item:last-child{
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 640px){
+  .grid-item{
+    margin-right: 2rem;
+    width: calc(50% - 32px);
+  }
+}
+
 /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
 
 /*
@@ -1221,6 +1263,10 @@ video {
   flex-direction: column;
 }
 
+.tw-flex-wrap{
+  flex-wrap: wrap;
+}
+
 .tw-items-center{
   align-items: center;
 }
@@ -1454,10 +1500,6 @@ a{
   text-decoration-line: underline;
 }
 
-.last\:tw-mb-0:last-child{
-  margin-bottom: 0px;
-}
-
 .last\:tw-mr-0:last-child{
   margin-right: 0px;
 }
@@ -1498,10 +1540,6 @@ a{
     bottom: -1.75rem;
   }
 
-  .sm\:tw-mb-0{
-    margin-bottom: 0px;
-  }
-
   .sm\:tw-mr-6{
     margin-right: 1.5rem;
   }
@@ -1522,8 +1560,8 @@ a{
     width: 15rem;
   }
 
-  .sm\:tw-w-full{
-    width: 100%;
+  .sm\:tw-w-\[calc\(50\%-32px\)\]{
+    width: calc(50% - 32px);
   }
 
   .sm\:tw-flex-row{
@@ -1532,6 +1570,10 @@ a{
 
   .sm\:tw-items-start{
     align-items: flex-start;
+  }
+
+  .sm\:tw-justify-start{
+    justify-content: flex-start;
   }
 }
 
