@@ -1374,6 +1374,10 @@ video {
   line-height: 1;
 }
 
+.tw-text-\[8px\]{
+  font-size: 8px;
+}
+
 .tw-text-base{
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1387,6 +1391,10 @@ video {
 .tw-text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.tw-text-\[10px\]{
+  font-size: 10px;
 }
 
 .tw-font-bold{
